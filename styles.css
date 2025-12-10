@@ -1,0 +1,54 @@
+:root{
+  --bg:#0b1020;
+  --card:#0f1724;
+  --muted:#9aa4b2;
+  --accent:#7c5cff;
+  --text:#e6eef8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#071225);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+.container{max-width:980px;margin:0 auto;padding:2rem}
+.site-header{background:transparent;padding:1rem 0}
+.header-inner{display:flex;align-items:center;gap:1rem}
+.brand{font-weight:700;color:var(--text);text-decoration:none;font-size:1.1rem}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:0.75rem}
+.nav-list a{color:var(--muted);text-decoration:none;font-size:0.95rem}
+#theme-toggle{margin-left:auto;background:transparent;border:0;color:var(--muted);font-size:1.1rem;cursor:pointer}
+.hero{padding:3rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:center}
+.hero-text h1{margin:0 0 0.5rem;font-size:2.1rem}
+.lead{color:var(--muted);max-width:55ch}
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:1rem;display:flex;flex-direction:column;align-items:center}
+.avatar{width:100%;height:auto;border-radius:8px;display:block}
+.caption{color:var(--muted);font-size:0.9rem;margin-top:0.6rem}
+.section{padding:2.25rem 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:8px}
+.skills-list{display:flex;flex-wrap:wrap;gap:0.5rem;padding:0;margin:0;list-style:none}
+.skills-list li{background:#0e1522;padding:0.4rem 0.6rem;border-radius:6px;font-size:0.9rem;color:var(--muted)}
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:1rem 0;margin-top:3rem}
+.btn{display:inline-block;background:var(--accent);color:white;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;border:0}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+.contact-form{display:grid;gap:0.6rem;max-width:560px}
+label{font-size:0.9rem}
+input[type=text],input[type=email],textarea{padding:0.6rem;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);resize:vertical}
+button[type=submit]{cursor:pointer}
+.form-status{color:var(--muted);font-size:0.95rem;margin-top:0.4rem}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero-grid{grid-template-columns:1fr;}
+  #theme-toggle{order:3}
+}
+
+/* Light theme support (class on html) */
+:root.light{--bg:#f7f9fc;--card:#ffffff;--muted:#556078;--text:#0b1220;--accent:#5b4bff}
