@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Personal Website</title>
+  <meta name="description" content="Personal website of Your Name — developer, designer, creator." />
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0b1020">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Your Name — Personal Website" />
+  <meta property="og:description" content="Developer, designer, and creator. Portfolio and contact." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop&crop=faces" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Your Name</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi — I'm Your Name</h1>
+          <p class="lead">I build thoughtful web experiences and explore clean UI/UX design. I currently work on accessible and performant front-end projects.</p>
+          <p>
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </p>
+        </div>
+        <div class="hero-card" aria-hidden="false">
+          <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=700&auto=format&fit=crop&crop=faces" alt="Your portrait or avatar">
+          <p class="caption">Your role • Location</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p>I’m a developer and designer who loves simple, resilient interfaces. I focus on accessibility, performance, and clear code. Replace this with a short bio (2–4 sentences).</p>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Selected Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>Short description — what it does, tech used, impact. <a href="#" class="link-inline">View</a></p>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Short description — link to repo or live demo. <a href="#" class="link-inline">View</a></p>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Short description — open-source, blog post, etc. <a href="#" class="link-inline">View</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <ul class="skills-list" aria-label="Skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Accessibility</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section container contact-section">
+      <h2>Contact</h2>
+      <p>If you'd like to work together or say hi, email me at <a href="mailto:you@domain.com">you@domain.com</a> or use the form below.</p>
+
+      <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="_replyto" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <!-- If you don't want to use an external form service, set method="GET" and action="mailto:you@domain.com" or handle server-side. -->
+        <button type="submit" class="btn">Send</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name — <a href="https://github.com/jylinnn" target="_blank" rel="noopener">GitHub</a> • <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter</a></p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
